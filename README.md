@@ -14,7 +14,7 @@
 
 #### 1st Table 
   SELECT  
-      f.aircraft_code,  
+      <br>f.aircraft_code,  
       b.book_date,  
       f.scheduled_departure,  
        avg(t.amount) as ticket_price,
