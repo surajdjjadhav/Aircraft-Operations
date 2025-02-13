@@ -32,11 +32,11 @@
   select
            t.passenger_id ,
            SUM(tf.amount) AS total_investment,
-           COUNT(tf.flight_id) AS total_travels ,
-           julianday('2017-12-31') - MAX(julianday(substr(b.book_date, 1, 10))) AS recency 
+           COUNT(tf.flight_id) AS total_travels ,<br>
+           julianday('2017-12-31') - MAX(julianday(substr(b.book_date, 1, 10))) AS recency <br>
            from tickets t inner join ticket_flights tf on t.ticket_no=tf.ticket_no
-           inner join bookings b on t.book_ref=b.book_ref
-           group by passenger_id 
+           inner join bookings b on t.book_ref=b.book_ref <br>
+           group by passenger_id <br>
 
 #### 3rd Table
 
